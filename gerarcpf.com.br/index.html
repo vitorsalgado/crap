@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description"
+          content="Gerador de CPF (Cadastro de Pessoa Física) fictício e válido. Ferramenta ideal para testadores e desenvolvedores de software."/>
+    <meta name="keywords" content="gerar,gerador,validar,cpf,cadastro,pessoa,física,fictício,java,c#,testes"/>
+    <meta name="author" content="Vitor Hugo Salgado"/>
+    <meta name="rating" content="general"/>
+    <meta name="robots" content="index, follow">
+
+    <meta name="google-site-verification" content="B00bPGXvdm7nNmSwgd42dV9sWEFUYVimxBfiVNNBd4s" />
+
+    <title>Gerador de CPF - Ferramenta para Gerar um CPF Fictício</title>
+
+    <meta property="og:title" content="Gerador de CPF"/>
+    <meta property="og:site_name" content="Gerar CPF"/>
+    <meta property="og:image" content="http://gerarcpf.com.br/static/images/avatar.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://gerarcpf.com.br/"/>
+    <meta property="og:description"
+          content="Gerador de CPF (Cadastro de Pessoa Física) fictício. Ferramenta ideal para auxiliar desenvolvedores e testadores de software."/>
+    <meta property="og:locale" content="pt_BR"/>
+
+    <meta property="fb:admins" content="100001103617763"/>
+    <meta property="fb:app_id" content="1390096521288477"/>
+    <meta property="fb:page_id" content="800806713298921"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@gerarcpf"/>
+    <meta name="twitter:creator" content="@vtrsalgado"/>
+
+    <link rel="canonical" href="http://gerarcpf.com.br/"/>
+    <link rel="icon" type="image/x-icon" href="http://gerarcpf.com.br/static/images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="http://gerarcpf.com.br/static/images/apple-touch-icon.png"/>
+    <link rel="icon" href="http://gerarcpf.com.br/static/images/icon.png" sizes="192x192"/>
+
+    <link href="static/css/open-sans.css" rel="stylesheet" />
+    <link href="static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="static/css/main.css" rel="stylesheet"/>
+    <link href="https://plus.google.com/+gerarcpfBr/" rel="publisher"/>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-58026334-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "WebSite",
+			"name" : "Gerar CPF",
+			"url" : "http://gerarcpf.com.br/",
+			"sameAs" : [
+				"https://www.facebook.com/gerarcpf",
+				"https://twitter.com/gerarcpf",
+				"https://plus.google.com/+gerarcpfBr"
+				]
+		}
+
+    </script>
+</head>
+<body>
+<div id="fb-root"></div>
+<header class="header navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header navbar-left">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" title="Página Inicial"><strong>Gerador de CPF</strong></a>
+        </div>
+        <div class="navbar-right">
+            <nav class="collapse navbar-collapse pull-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.facebook.com/gerarcpf/" title="Page do Facebook"><span>Facebook</span></a>
+                    </li>
+                    <li><a href="codigos/validar-cpf-java.html"
+                           title="Código para Gerar e Validar CPF em Java">Java</a></li>
+                    <li><a href="codigos/validar-cpf-php.html" title="Script para Gerar e Validar CPF em PHP">PHP</a>
+                    </li>
+                    <li><a href="codigos/validar-cpf-csharp-dotnet.html" title="Código para Gerar e Validar CPF em C#">C#</a>
+                    </li>
+                    <li><a href="codigos/validar-cpf-javascript.html"
+                           title="Script para Gerar e Validar CPF em Javascript">Javascript</a></li>
+                    <li><a href="codigos/validar-cpf-python.html" title="Código para Gerar e Validar CPF em Python">Python</a>
+                    </li>
+                    <li><a href="codigos/validar-cpf-ruby.html"
+                           title="Código para Gerar e Validar CPF em Ruby">Ruby</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <h1 class="text-uppercase text-center cpf-title"><strong>Gerador de CPF</strong></h1>
+    <section class="container text-center">
+        <h2>Utilize esta ferramenta para <strong>gerar</strong> um CPF <strong>fictício</strong> e
+            <strong>válido</strong> conforme o algoritmo explicado <a href="#algoritmo"
+                                                                      title="Algoritmo do CPF">abaixo</a>. Você também
+            pode <strong>validar</strong> CPFs no campo abaixo. Esta ferramenta tem o objetivo de auxiliar
+            desenvolvedores e testadores de software em suas atividades.</h2>
+
+        <div class="container">
+            <input type="text" id="cpf-generator" class="cpf-generator"/>
+
+            <div id="invalid-cpf-message" class="invalid-cpf-message">
+                <p>CPF inválido!</p>
+            </div>
+            <div id="valid-cpf-message" class="valid-cpf-message">
+                <p>CPF válido!</p>
+            </div>
+        </div>
+        <br/>
+
+        <div class="container ad-home-gerador">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- gerarcpf-banner-topo-home -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:320px;height:100px"
+                 data-ad-client="ca-pub-8983921416236155"
+                 data-ad-slot="3285867627"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="container">
+            <input type="button" value="Gerar CPF" class="btn btn-default btn-lg" id="btn-generate-cpf"/>
+            <input type="button" value="Validar CPF" class="btn btn-default btn-lg" id="btn-validate-cpf"/>
+            <input type="button" value="Pontuação" class="btn btn-default btn-lg btn-red-active" id="btn-dots"/>
+        </div>
+    </section>
+    <div class="container-fluid top-social-container">
+        <p class="lead text-center">Curtiu? Compartilhe com seus amigos! :)</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="fb-like" data-href="https://www.facebook.com/pages/Gerar-CPF/800806713298921"
+                     data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+            </div>
+            <div class="col-md-6">
+                <g:plus action="share"></g:plus>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid code-wrapper">
+    <div class="row">
+        <div class="col-md-4">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- gerar-cpf-responsive-1 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8983921416236155"
+                 data-ad-slot="6045164427"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="col-md-4">
+            <h2 class="code-wrapper-title">Códigos para <u>Geração</u> e <u>Validação</u> de CPF</h2>
+
+            <h3 class="code-wrapper-description">Utilize os links abaixo para ver diversos exemplos de <strong>como
+                gerar</strong> e <strong>validar CPF</strong> em diversas linguagens de programação.</h3>
+            <nav class="code-menu">
+                <ul>
+                    <li><a href="codigos/validar-cpf-java.html" title="Código para Gerar e Validar CPF em Java"><strong>Java</strong></a>
+                    </li>
+                    <li><a href="codigos/validar-cpf-csharp-dotnet.html"
+                           title="Código para Gerar e Validar CPF em C#"><strong>C#</strong></a></li>
+                    <li><a href="codigos/validar-cpf-javascript.html"
+                           title="Script para Gerar e Validar CPF em Javascript"><strong>Javascript</strong></a></li>
+                    <li><a href="codigos/validar-cpf-php.html" title="Script para Gerar e Validar CPF em PHP"><strong>PHP</strong></a>
+                    </li>
+                    <li><a href="codigos/validar-cpf-python.html"
+                           title="Código para Gerar e Validar CPF em Python"><strong>Python</strong></a></li>
+                    <li><a href="codigos/validar-cpf-ruby.html" title="Código para Gerar e Validar CPF em Ruby"><strong>Ruby</strong></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-4">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- gerar-cpf-responsive-2 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8983921416236155"
+                 data-ad-slot="8859030025"
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid information-wrapper">
+    <div class="text-center">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- gerar-cpf-banner-grande-1 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:100px"
+             data-ad-client="ca-pub-8983921416236155"
+             data-ad-slot="4289229628"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <h1 class="information-wrapper-title">Saiba mais sobre o CPF (Cadastro de Pessoa Física)</h1>
+
+    <div class="container-fluid">
+        <section class="container">
+            <h2>O que é <strong>CPF</strong> (Cadastro de Pessoa Física)?</h2>
+
+            <div>É um banco de dados gerenciado pela Secretaria da Receita Federal do Brasil - RFB que armazena
+                informações cadastrais de contribuintes obrigados à inscrição no CPF, ou de cidadãos que se inscreveram
+                voluntariamente.
+            </div>
+            <em>Fonte: <a href="http://goo.gl/7QzKl4" title="Receita Federal do Brasil">Receita Federal do Brasil ·
+                2014</a></em>
+        </section>
+
+        <section class="container">
+            <h2>Significado dos dígitos</h2>
+
+            <div>
+                Os dois últimos dígitos do CPF são números de verificação: seguem um algoritmo de módulo 11, baseado no
+                valor dos outros dígitos, para possibilitar a verificação automática e pre class="dark-code-view"venir
+                erros de digitação.<br/><br/>
+                O dígito anterior (isto é, o terceiro dígito da direita para a esquerda) revela a unidade federativa em
+                que a pessoa registrou-se pela primeira vez, dado que é proibido (em condições normais) trocar de
+                número.<br/><br/>
+                Assim, basta observar o dígito final antes do traço para descobrir sua origem.<br/><br/>
+                <b>Exemplo:</b> CPF XXX.XXX.XX<b>6</b>-YY<br/><br/>
+                O número destacado (6) indica que a origem deste CPF é Minas Gerais, cujo código é "6". Segue a lista
+                com todos os estados brasileiros:<br/><br/>
+                <ul>
+                    <li><b>0</b> Rio Grande do Sul</li>
+                    <li><b>1</b> Distrito Federal, Goiás, Mato Grosso, Mato Grosso do Sul e Tocantins</li>
+                    <li><b>2</b> Amazonas, Pará, Roraima, Amapá, Acre e Rondônia</li>
+                    <li><b>3</b> Ceará, Maranhão e Piauí</li>
+                    <li><b>4</b> Paraíba, Pernambuco, Alagoas e Rio Grande do Norte</li>
+                    <li><b>5</b> Bahia e Sergipe</li>
+                    <li><b>6</b> Minas Gerais</li>
+                    <li><b>7</b> Rio de Janeiro e Espírito Santo</li>
+                    <li><b>8</b> São Paulo</li>
+                    <li><b>9</b> Paraná e Santa Catarina</li>
+                </ul>
+            </div>
+            <em>Fonte: <a href="http://goo.gl/Fu99tG" title="Wikipédia CPF">Wikipédia · 2014</a></em>
+        </section>
+
+        <section id="algoritmo" class="container">
+            <h2>Algoritmo do CPF</h2>
+
+            <div>
+                O algoritmo de validação do CPF calcula o primeiro dígito verificador a partir dos 9 primeiros dígitos
+                do CPF, e em seguida, calcula o segundo dígito verificador a partir dos 9 (nove) primeiros dígitos do
+                CPF, mais o primeiro dígito, obtido na primeira parte.<br/><br/>
+                Tome como exemplo o CPF fictício : <b>111.444.777-05</b>.
+                <h3>1 - Cálculo do primeiro dígito</h3>
+                O primeiro passo é calcular o primeiro dígito verificador, e para isso, separamos os primeiros 9 dígitos
+                do CPF (111.444.777) e multiplicamos cada um dos números, da direita para a esquerda por números
+                crescentes a partir do número 2, como no exemplo abaixo:<br/><br/>
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>28</td>
+                        <td>24</td>
+                        <td>20</td>
+                        <td>28</td>
+                        <td>21</td>
+                        <td>14</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br/><br/>
+                Multiplicamos cada digito do CPF pelo respectivo número e somamos cada um dos resultados: <b>10+9+8+28+24+20+28+21+14
+                = 162</b><br/><br/>
+                Pegamos o resultado obtido 162 e dividimos por 11. Consideramos como quociente apenas o valor
+                inteiro.<br/><br/>
+                <b>162 / 11 = 14 com resto 8</b><br/><br/>
+                - Se o resto da divisão for menor que 2, então o dígito é igual a 0 (Zero).<br/>
+                - Se o resto da divisão for maior ou igual a 2, então o dígito verificador é igual a 11 menos o resto da
+                divisão (11 - resto).<br/><br/>
+                No nosso exemplo temos que o resto é 8 então faremos <b>11-8 = 3</b><br/><br/>
+                Logo o primeiro dígito verificador é 3. Então podemos escrever o CPF com os dois dígitos calculados: <b>111.444.777-3X</b>
+
+                <h3>2 - Cálculo do segundo dígito</h3>
+                Para calcular o segundo dígito vamos usar o primeiro digito já calculado. Vamos montar a mesma tabela de
+                multiplicação usada no cálculo do primeiro dígito. Só que desta vez usaremos na segunda linha os valores
+                11,10,9,8,7,6,5,4,3,2 já que estamos incluindo mais um digito no cálculo(o primeiro dígito calculado):
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>7</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>7</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>4</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>10</td>
+                        <td>9</td>
+                        <td>32</td>
+                        <td>28</td>
+                        <td>24</td>
+                        <td>35</td>
+                        <td>28</td>
+                        <td>21</td>
+                        <td>6</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br/><br/>
+                Novamente, efetuamos somamos o resultado da multiplicação: <b>11 + 10 + 9 + 32 + 28 + 24 + 35 + 28 + 21
+                + 6 = 204</b><br/><br/>
+                Dividimos o total do somatório por 11 e consideramos o resto da divisão.<br/><br/>
+                <b>204 / 11 = 18 e resto 6</b>
+                Após obter o resto da divisão, pre class="dark-code-view"cisamos aplicar a mesma regra que utilizamos
+                para obter o primeiro dígito:<br/><br/>
+                - Se o resto da divisão for menor que 2, então o dígito é igual a 0 (Zero).<br/>
+                - Se o resto da divisão for maior ou igual a 2, então o dígito é igual a 11 menos o resto da divisão (11
+                - resto).<br/><br/>
+                <b>11-6= 5</b> logo 5 é o nosso segundo dígito verificador.<br/><br/>
+                Logo o nosso CPF fictício será igual a: <b>111.444.777-35.</b><br/><br/>
+            </div>
+            <em>Fonte: <a href="http://goo.gl/wNgcb0" title="Artigo Macoratti - CPF">Macoratti · 2014</a></em>
+        </section>
+    </div>
+</div>
+
+<!-- Apenas HOME -->
+<div class="container-fluid bottom-social-container">
+    <p class="lead text-center">Curtiu? Compartilhe com seus amigos nosso site! :)</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="fb-like" data-href="https://www.facebook.com/pages/Gerar-CPF/800806713298921"
+                     data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+            </div>
+            <div class="col-md-6">
+                <g:plus action="share"></g:plus>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid ad-container text-center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- gerar-cpf-banner-grande-1 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:320px;height:100px"
+         data-ad-client="ca-pub-8983921416236155"
+         data-ad-slot="4289229628"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<footer class="container-fluid">
+    <div class="container wrapper">
+        <div class="row">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span>&lt;/&gt;</span>
+                </div>
+                <span class="footer-site-name"><strong>Gerador de CPF</strong></span>
+            </div>
+            <p class="footer-description">
+                Ferramenta para geração de <strong>CPF (Cadastro de Pessoa Física)</strong> fictício auxiliando
+                principalmente profissionais na área de desenvolvimento e teste de software. Veja também exemplos de
+                códigos aplicados nas linguagens Java, .Net C#, Javascript, PHP, Python e Ruby.
+            </p>
+        </div>
+        <p>
+            © 2014 - 2015 - Gerador de CPF - Ferramenta de Geração e Validação de CPF Fictício
+        </p>
+    </div>
+</footer>
+
+<script>
+    window.___gcfg = {
+        lang: 'pt-BR',
+        parsetags: 'onload'
+    };
+</script>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1390096521288477',
+            status: true,
+            xfbml: true,
+            version: 'v2.4'
+        });
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript" async defer
+        src="https://apis.google.com/js/platform.js?publisherid=105856849917847628854"></script>
+<script type="text/javascript" src="static/js/all.js"></script>
+</body>
+</html>

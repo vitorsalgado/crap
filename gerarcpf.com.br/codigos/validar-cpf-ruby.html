@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Veja como validar e gerar um CPF fictício utilizando Ruby" />
+	<meta name="keywords" content="gerar,gerador,validar,cpf,cadastro,pessoa,física,fictício,java,c#,testes" />
+	<meta name="author" content="Vitor Hugo Salgado" />
+	<meta name="rating" content="general" />
+
+	<title>Código para Validar e Gerar CPF fictício em Ruby</title>
+
+	<meta property="og:title" content="Gerador de CPF" />
+	<meta property="og:site_name" content="Gerar CPF" />
+	<meta property="og:image" content="/static/images/avatar.png" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="http://gerarcpf.com.br/" />
+	<meta property="og:description" content="Veja como validar e gerar um CPF fictício utilizando Ruby" />
+	<meta property="og:locale" content="pt_BR" />
+
+	<meta property="fb:admins" content="100001103617763" />
+	<meta property="fb:app_id" content="1390096521288477" />
+	<meta property="fb:page_id" content="800806713298921" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@gerarcpf" />
+	<meta name="twitter:creator" content="@vtrsalgado" />
+
+	<link rel="canonical" href="http://gerarcpf.com.br/codigos/validar-cpf-ruby.html" />
+	<link rel="icon" type="image/x-icon" href="../static/images/favicon.ico" />
+	<link rel="apple-touch-icon" href="../static/images/apple-touch-icon.png" />
+	<link rel="icon" href="../static/images/icon.png" sizes="192x192">
+
+	<link href="../static/css/open-sans.css" rel="stylesheet" />
+	<link href="../static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="../static/css/main.css" rel="stylesheet"/>
+	<link href="https://plus.google.com/+gerarcpfBr/" rel="publisher" />
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58026334-2', 'auto');
+	  ga('send', 'pageview');
+	</script>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<header class="header navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header navbar-left">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/" title="Página Inicial"><strong>Gerador de CPF</strong></a>
+			</div>
+			<div class="navbar-right">
+				<nav class="collapse navbar-collapse pull-right">
+					<ul class="nav navbar-nav">
+						<li><a href="https://www.facebook.com/gerarcpf/" title="Page do Facebook"><span>Facebook</span></a></li>
+						<li><a href="/codigos/validar-cpf-java.html" title="Código para Gerar e Validar CPF em Java">Java</a></li>
+						<li><a href="/codigos/validar-cpf-php.html" title="Script para Gerar e Validar CPF em PHP">PHP</a></li>
+						<li><a href="/codigos/validar-cpf-csharp-dotnet.html" title="Código para Gerar e Validar CPF em C#">C#</a></li>
+						<li><a href="/codigos/validar-cpf-javascript.html" title="Script para Gerar e Validar CPF em Javascript">Javascript</a></li>
+						<li><a href="/codigos/validar-cpf-python.html" title="Código para Gerar e Validar CPF em Python">Python</a></li>
+						<li><a href="/codigos/validar-cpf-ruby.html" title="Código para Gerar e Validar CPF em Ruby">Ruby</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Code -->
+	<div class="code-wrapper">
+		<div class="container-fluid ad-container text-center">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- gerarcpf-banner-topo-home -->
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:320px;height:100px"
+				 data-ad-client="ca-pub-8983921416236155"
+				 data-ad-slot="3285867627"></ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+		<h1 class="text-center">Script para validar e gerar CPF utilizando Ruby</h1>
+		<h2 class="code-wrapper-subtitle">O código abaixo demonstra uma classe desenvolvida em Ruby que possui métodos para validar e gerar um CPF fictício.</h2>
+		<p class="code-wrapper-description">Veja também exemplos em outras linguagens de programação.</p>
+		<nav class="code-menu">
+			<ul>
+				<li><a href="/codigos/validar-cpf-java.html" title="Código para Gerar e Validar CPF em Java">Java</a></li>
+				<li><a href="/codigos/validar-cpf-csharp-dotnet.html" title="Código para Gerar e Validar CPF em C#">C#</a></li>
+				<li><a href="/codigos/validar-cpf-javascript.html" title="Script para Gerar e Validar CPF em Javascript">Javascript</a></li>
+				<li><a href="/codigos/validar-cpf-php.html" title="Script para Gerar e Validar CPF em PHP">PHP</a></li>
+				<li><a href="/codigos/validar-cpf-python.html" title="Código para Gerar e Validar CPF em Python">Python</a></li>
+			</ul>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-8">
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">	<span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Cpf</span>
+		<span style="color: #003366; font-weight: bold">NUMBERS</span> <span style="color: #333333">=</span> <span style="color: #333333">[*</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">.</span>.<span style="color: #0000DD; font-weight: bold">9</span><span style="color: #333333">].</span>freeze
+
+		<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">generate</span>
+		  numbers <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">9</span><span style="color: #333333">.</span>times<span style="color: #333333">.</span>map { <span style="color: #003366; font-weight: bold">NUMBERS</span><span style="color: #333333">.</span>sample }
+		  numbers <span style="color: #333333">&lt;&lt;</span> <span style="color: #003366; font-weight: bold">Cpf</span><span style="color: #333333">.</span>new<span style="color: #333333">.</span>verifierDigit(numbers)
+		  numbers <span style="color: #333333">&lt;&lt;</span> <span style="color: #003366; font-weight: bold">Cpf</span><span style="color: #333333">.</span>new<span style="color: #333333">.</span>verifierDigit(numbers)
+		  numbers<span style="color: #333333">.</span>join(<span style="background-color: #fff0f0">&quot;&quot;</span>)
+		<span style="color: #008800; font-weight: bold">end</span>
+
+		<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">verifierDigit</span>(numbers)
+		  modulus <span style="color: #333333">=</span> numbers<span style="color: #333333">.</span>size <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span>
+		  multiplied <span style="color: #333333">=</span> numbers<span style="color: #333333">.</span>map<span style="color: #333333">.</span>each_with_index <span style="color: #008800; font-weight: bold">do</span> <span style="color: #333333">|</span>number, index<span style="color: #333333">|</span>
+			number <span style="color: #333333">*</span> (modulus <span style="color: #333333">-</span> index)
+		  <span style="color: #008800; font-weight: bold">end</span>
+		  mod <span style="color: #333333">=</span> multiplied<span style="color: #333333">.</span>reduce(<span style="color: #AA6600">:+</span>) <span style="color: #333333">%</span> <span style="color: #0000DD; font-weight: bold">11</span>
+		  mod <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">?</span> <span style="color: #0000DD; font-weight: bold">0</span> : <span style="color: #0000DD; font-weight: bold">11</span> <span style="color: #333333">-</span> mod
+		<span style="color: #008800; font-weight: bold">end</span>
+	
+		<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">validateCpf</span>(cpf<span style="color: #333333">=</span><span style="color: #003388; font-weight: bold">nil</span>)
+	
+			<span style="color: #008800; font-weight: bold">return</span> <span style="color: #003388; font-weight: bold">false</span> <span style="color: #008800; font-weight: bold">if</span> cpf<span style="color: #333333">.</span>nil?
+	 
+			winvalidos <span style="color: #333333">=</span> <span style="color: #DD2200; background-color: #fff0f0">%w{12345678909 11111111111 22222222222 33333333333 44444444444 55555555555 66666666666 77777777777 88888888888 99999999999 00000000000}</span>
+			wvalor <span style="color: #333333">=</span> cpf<span style="color: #333333">.</span>scan <span style="color: #000000; background-color: #fff0ff">/[0-9]/</span>
+	  
+			<span style="color: #008800; font-weight: bold">if</span> wvalor<span style="color: #333333">.</span>length <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">11</span>
+				<span style="color: #008800; font-weight: bold">unless</span> winvalidos<span style="color: #333333">.</span>member?(wvalor<span style="color: #333333">.</span>join)
+					wvalor <span style="color: #333333">=</span> wvalor<span style="color: #333333">.</span>collect{<span style="color: #333333">|</span>x<span style="color: #333333">|</span> x<span style="color: #333333">.</span>to_i}
+					wsoma <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">9</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">7</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">7</span><span style="color: #333333">]+</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333333">]</span>
+					wsoma <span style="color: #333333">=</span> wsoma <span style="color: #333333">-</span> (<span style="color: #0000DD; font-weight: bold">11</span> <span style="color: #333333">*</span> (wsoma<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">11</span>))
+					wresult1 <span style="color: #333333">=</span> (wsoma <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #000000; font-weight: bold">or</span> wsoma <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">1</span>) ? <span style="color: #0000DD; font-weight: bold">0</span> : <span style="color: #0000DD; font-weight: bold">11</span> <span style="color: #333333">-</span> wsoma
+
+					<span style="color: #008800; font-weight: bold">if</span> wresult1 <span style="color: #333333">==</span> wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">9</span><span style="color: #333333">]</span>
+						wsoma <span style="color: #333333">=</span> wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">11</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">9</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">7</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">6</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">7</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">+</span>wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">9</span><span style="color: #333333">]*</span><span style="color: #0000DD; font-weight: bold">2</span>
+						wsoma <span style="color: #333333">=</span> wsoma <span style="color: #333333">-</span> (<span style="color: #0000DD; font-weight: bold">11</span> <span style="color: #333333">*</span> (wsoma<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">11</span>))
+						wresult2 <span style="color: #333333">=</span> (wsoma <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #000000; font-weight: bold">or</span> wsoma <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">1</span>) ? <span style="color: #0000DD; font-weight: bold">0</span> : <span style="color: #0000DD; font-weight: bold">11</span> <span style="color: #333333">-</span> wsoma
+						<span style="color: #008800; font-weight: bold">return</span> <span style="color: #003388; font-weight: bold">true</span> <span style="color: #008800; font-weight: bold">if</span> wresult2 <span style="color: #333333">==</span> wvalor<span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">]</span> 
+					<span style="color: #008800; font-weight: bold">end</span>
+				<span style="color: #008800; font-weight: bold">end</span>
+			<span style="color: #008800; font-weight: bold">end</span>
+	  
+			<span style="color: #008800; font-weight: bold">return</span> <span style="color: #003388; font-weight: bold">false</span> 
+		<span style="color: #008800; font-weight: bold">end</span>
+
+	<span style="color: #008800; font-weight: bold">end</span>
+
+			
+</pre></div>
+				</div>
+				<div class="col-xs-6 col-md-4">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- gerar-cpf-retangulo-medio-1 -->
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:300px;height:250px"
+						 data-ad-client="ca-pub-8983921416236155"
+						 data-ad-slot="5765962824"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container-fluid ad-container text-center">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- gerar-cpf-banner-grande-1 -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:320px;height:100px"
+			 data-ad-client="ca-pub-8983921416236155"
+			 data-ad-slot="4289229628"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+
+	<footer class="container-fluid">
+		<div class="container wrapper">
+			<div class="row">
+				<div class="footer-logo">
+					<div class="logo">
+						<span>&lt;/&gt;</span>
+					</div>
+					<span class="footer-site-name"><strong>Gerador de CPF</strong></span>
+				</div>
+				<p class="footer-description">
+					Ferramenta para geração de <strong>CPF (Cadastro de Pessoa Física)</strong> fictício auxiliando principalmente profissionais na área de desenvolvimento e teste de software. Veja também exemplos de códigos aplicados nas linguagens Java, .Net C#, Javascript, PHP, Python e Ruby.
+				</p>
+			</div>
+			<p>
+				© 2014 - 2015 - Gerador de CPF - Ferramenta de Geração e Validação de CPF Fictício
+			</p>
+		</div>
+	</footer>
+	<script>
+		window.___gcfg = {
+			lang: 'pt-BR',
+			parsetags: 'onload'
+		};
+	</script>
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				appId: '1390096521288477',
+				status: true,
+				xfbml: true,
+				version: 'v2.4'
+			});
+		};
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/pt_BR/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<script type="text/javascript" async defer src="https://apis.google.com/js/platform.js?publisherid=105856849917847628854"></script>
+	<script type="text/javascript" src="../static/js/all.js"></script>
+</body>
+</html>

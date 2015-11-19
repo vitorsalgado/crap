@@ -1,0 +1,22 @@
+﻿@section scripts {
+	@Scripts.Render("~/js/map")
+}
+
+@section nav{
+	<form class="navbar-form navbar-left" role="form">
+		<div class="form-group">
+			<input placeholder="Search a place" type="text" class="form-control" id="places-searcher">
+		</div>
+		<button type="submit" class="btn btn-danger" id="places-searcher-action">Search</button>
+	</form>
+}
+
+<div class="container-fluid">
+	<div class='fluid-container fill' data-toggle="context" data-target="#map-context-menu">
+		<div id="mapContainer"></div>
+		<div id="cd-zoom-in"></div>
+		<div id="cd-zoom-out"></div>
+	</div>
+</div>
+
+@Html.Partial("_Infobox")

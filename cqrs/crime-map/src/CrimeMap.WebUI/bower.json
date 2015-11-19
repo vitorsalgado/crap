@@ -1,0 +1,23 @@
+{
+  "name": "PogStore - Admin",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vitorsalgado/pog-store",
+  "authors": [
+    "Vitor Hugo Salgado <vsalgadopb@gmail.com>"
+  ],
+  "description": "E-Commerce - Admin Application",
+  "main": "PogStore.Admin.csproj",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0",
+    "magnific-popup": "~0.9.9"
+  }
+}

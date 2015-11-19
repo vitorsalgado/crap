@@ -1,0 +1,383 @@
+﻿a, ul, li, div, p, span, body, dl, dt, dd, button, ol, h1, h2, h3, h4, h5, img {
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+    list-style: none outside none;
+    list-style-type: none;
+    white-space: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #4d4e53;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: baseline;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+}
+
+.header a {
+    color: #fff;
+}
+
+.ad-container {
+    padding: 10px 0;
+    background: #fff;
+}
+
+.site-logo {
+    float: left;
+    display: block;
+    font-weight: bold;
+    margin: 2px 0 0 0;
+}
+
+.site-logo .logo {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: block;
+    color: #fff;
+    background: #f65a5b;
+    border: 1px solid #f65a5b;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    float: left;
+}
+
+.site-logo .logo span {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 100%;
+    padding: 2px 1px;
+}
+
+.site-logo .site-name {
+    float: left;
+    display: block;
+    padding: 10px 0 10px 10px;
+    font-size: 20px;
+}
+
+.menu {
+    float: right;
+    display: block;
+    padding: 10px 0;
+}
+
+.menu ul li {
+    float: right;
+    margin-left: 12px;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2px;
+}
+
+.cpf-container {
+    width: 90%;
+    margin: 0 auto 20px;
+}
+
+.cpf-title {
+    font-size: 36px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #fff;
+    color: #4d4e53;
+}
+
+.cpf-generator {
+    width: 600px;
+    padding: 15px;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-size: 32px;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+.invalid-cpf-message, .valid-cpf-message {
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    display: none;
+}
+
+.invalid-cpf-message {
+    color: #f65a5b;
+}
+
+.valid-cpf-message {
+    color: rgba(22, 180, 42, 0.78);
+}
+
+.algoritmo-link-container,
+.code-wrapper {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.code-wrapper {
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.code-wrapper-title,
+.code-wrapper-subtitle {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.code-wrapper-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.code-wrapper-subtitle {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.code-wrapper-description {
+    font-size: 14px;
+}
+
+.code-wrapper-description {
+    text-align: center;
+    font-style: italic;
+}
+
+.code-menu {
+    width: 380px;
+    margin: 0 auto 50px;
+}
+
+.code-menu ul li {
+    float: left;
+    margin-left: 12px;
+}
+
+.code-menu ul li a {
+    display: block;
+    padding: 2px;
+    color: #4d4e53;
+}
+
+.code-menu ul li a strong {
+    font-weight: normal;
+}
+
+.code-menu ul li a:hover {
+    color: #f65a5b;
+}
+
+.code-section {
+    width: 700px;
+    margin: 20px auto;
+}
+
+.large-code-section {
+    width: 900px;
+    margin: 20px auto;
+}
+
+.dark-code-view {
+    color: #B9BE2C;
+    background: #2d3033;
+    max-height: 350px;
+    overflow: auto;
+}
+
+.code-section-title {
+    font-size: 26px;
+    border-bottom: 1px dashed #000;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.information-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.information-wrapper-title {
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+section h2 {
+    margin: 30px 0 10px;
+    text-align: center;
+}
+
+section p,
+section div.content {
+    padding: 5px 0;
+}
+
+section h3 {
+    padding: 10px 0 15px;
+}
+
+.information-wrapper table td {
+    text-align: center;
+}
+
+.information-wrapper table tr:first-child {
+    background: #a5a6a7;
+    font-weight: bold;
+}
+
+.top-social-container,
+.bottom-social-container {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.bottom-social-container {
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.social-wrapper {
+    background: transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 20px 0;
+    background: #2d3033;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.5;
+    color: #a5a6a7;
+    margin: 0 0 0 0;
+}
+
+.footer-menu {
+    padding-top: 10px;
+}
+
+footer a {
+    color: #a5a6a7;
+    float: left;
+    display: block;
+    padding-right: 10px;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer p {
+    text-align: center;
+    font-size: 12px;
+}
+
+.footer-logo {
+    float: left;
+    display: block;
+    font-weight: bold;
+    margin: 2px 0 0 0;
+}
+
+.footer-logo .logo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    color: #a5a6a7;
+    font-weight: bold;
+    border: 4px solid #a5a6a7;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+    float: left;
+}
+
+.footer-logo .logo span {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    width: 100%;
+    padding: 2px 1px;
+}
+
+.footer-logo .footer-site-name {
+    float: left;
+    display: block;
+    padding: 10px 0 10px 10px;
+    font-size: 24px;
+}
+
+.footer-description {
+    clear: both;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 22px;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+.btn-red-active {
+    background-color: rgba(242, 141, 17, 0.50);
+    font-weight: bold;
+    border: 2px solid #3366CC;
+}
+
+.fb-like {
+    z-index: 9999;
+}
+
+@media only screen and (max-width: 768px) {
+    .cpf-generator {
+        width: 200px;
+        font-size: 18px;
+    }
+}
+
+@media print {
+    .social-container {
+        display: none;
+    }
+
+    .social-wrapper {
+        display: none;
+    }
+}

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4246DF3A-9EDB-4B97-A03D-B9C786F908F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrimeMap.CommandHandlers</RootNamespace>
+    <AssemblyName>CrimeMap.CommandHandlers</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\CommandDispatcher.cs" />
+    <Compile Include="Infrastructure\CommandHandlerNotRegisteredException.cs" />
+    <Compile Include="Infrastructure\ICommandDispatcher.cs" />
+    <Compile Include="Infrastructure\ICommandHandler.cs" />
+    <Compile Include="Infrastructure\ICommandHandlerResolver.cs" />
+    <Compile Include="Infrastructure\TransactionalCommandHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\RegisterExternalUserHandler.cs" />
+    <Compile Include="Users\RegisterUserHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrimeMap.Commands\CrimeMap.Commands.csproj">
+      <Project>{0eac121a-2397-4998-b56e-eb252b3f4ac3}</Project>
+      <Name>CrimeMap.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrimeMap.Common\CrimeMap.Common.csproj">
+      <Project>{f84a167d-08e8-4dd9-a4b3-bb63167dc26c}</Project>
+      <Name>CrimeMap.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrimeMap.Core\CrimeMap.Core.csproj">
+      <Project>{ad778cd4-a477-4c4c-8f97-b3e268eca17f}</Project>
+      <Name>CrimeMap.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrimeMap.Domain\CrimeMap.Domain.csproj">
+      <Project>{f970170d-d2b1-47f4-8f73-870772f3993b}</Project>
+      <Name>CrimeMap.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrimeMap.Encryption\CrimeMap.Encryption.csproj">
+      <Project>{fb6d07f2-04cc-439a-9945-5eb6dc71ec21}</Project>
+      <Name>CrimeMap.Encryption</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

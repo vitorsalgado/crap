@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="Veja como validar e gerar um CPF fictício utilizando .NET C#"/>
+    <meta name="keywords" content="gerar,gerador,validar,cpf,cadastro,pessoa,física,fictício,java,c#,testes"/>
+    <meta name="author" content="Vitor Hugo Salgado"/>
+    <meta name="rating" content="general"/>
+
+    <title>Validar e Gerar CPF fictício em .Net C#</title>
+
+    <meta property="og:title" content="Gerador de CPF"/>
+    <meta property="og:site_name" content="Gerar CPF"/>
+    <meta property="og:image" content="static/images/avatar.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://gerarcpf.com.br/validar-cpf-csharp-dotnet.html"/>
+    <meta property="og:description" content="Veja como validar e gerar um CPF fictício utilizando .NET C#"/>
+    <meta property="og:locale" content="pt_BR"/>
+
+    <meta property="fb:admins" content="100001103617763"/>
+    <meta property="fb:app_id" content="1390096521288477"/>
+    <meta property="fb:page_id" content="800806713298921"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@gerarcpf"/>
+    <meta name="twitter:creator" content="@vtrsalgado"/>
+
+    <link rel="canonical" href="http://gerarcpf.com.br/validar-cpf-csharp-dotnet.html"/>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../static/images/apple-touch-icon.png"/>
+    <link rel="icon" href="../static/images/icon.png" sizes="192x192"/>
+
+    <link href="../static/css/open-sans.css" rel="stylesheet" />
+    <link href="../static/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../static/css/main.css" rel="stylesheet"/>
+    <link href="https://plus.google.com/+gerarcpfBr/" rel="publisher"/>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-58026334-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body>
+<div id="fb-root"></div>
+<header class="header navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header navbar-left">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" title="Página Inicial"><strong>Gerador de CPF</strong></a>
+        </div>
+        <div class="navbar-right">
+            <nav class="collapse navbar-collapse pull-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.facebook.com/gerarcpf/" title="Page do Facebook"><span>Facebook</span></a>
+                    </li>
+                    <li><a href="/codigos/validar-cpf-java.html"
+                           title="Código para Gerar e Validar CPF em Java">Java</a></li>
+                    <li><a href="/codigos/validar-cpf-php.html" title="Script para Gerar e Validar CPF em PHP">PHP</a>
+                    </li>
+                    <li><a href="/codigos/validar-cpf-csharp-dotnet.html" title="Código para Gerar e Validar CPF em C#">C#</a>
+                    </li>
+                    <li><a href="/codigos/validar-cpf-javascript.html"
+                           title="Script para Gerar e Validar CPF em Javascript">Javascript</a></li>
+                    <li><a href="/codigos/validar-cpf-python.html" title="Código para Gerar e Validar CPF em Python">Python</a>
+                    </li>
+                    <li><a href="/codigos/validar-cpf-ruby.html"
+                           title="Código para Gerar e Validar CPF em Ruby">Ruby</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Code -->
+<div class="code-wrapper">
+    <div class="container-fluid ad-container text-center">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- gerarcpf-banner-topo-home -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:100px"
+             data-ad-client="ca-pub-8983921416236155"
+             data-ad-slot="3285867627"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <h1 class="text-center">Classe utilitária para validar e gerar CPF utilizando .Net C#</h1>
+
+    <h2 class="code-wrapper-subtitle">O código abaixo demonstra uma classe desenvolvida em C# que possui métodos para
+        validar e gerar um CPF fictício.</h2>
+
+    <p class="code-wrapper-description">Veja também exemplos em outras linguagens de programação.</p>
+    <nav class="code-menu">
+        <ul>
+            <li><a href="/codigos/validar-cpf-java.html" title="Código para Gerar e Validar CPF em Java">Java</a></li>
+            <li><a href="/codigos/validar-cpf-javascript.html" title="Script para Gerar e Validar CPF em Javascript">Javascript</a>
+            </li>
+            <li><a href="/codigos/validar-cpf-php.html" title="Script para Gerar e Validar CPF em PHP">PHP</a></li>
+            <li><a href="/codigos/validar-cpf-python.html" title="Código para Gerar e Validar CPF em Python">Python</a>
+            </li>
+            <li><a href="/codigos/validar-cpf-ruby.html" title="Código para Gerar e Validar CPF em Ruby">Ruby</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8">
+                <!-- HTML generated using hilite.me -->
+                <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre
+                        style="margin: 0; line-height: 125%">	<span
+                        style="color: #008800; font-weight: bold">using</span> <span
+                        style="color: #0e84b5; font-weight: bold">System</span>;
+
+	<span style="color: #008800; font-weight: bold">namespace</span> <span style="color: #0e84b5; font-weight: bold">Utils</span> {
+
+		<span style="color: #008800; font-weight: bold">public</span> <span style="color: #008800; font-weight: bold">static</span> <span
+                            style="color: #008800; font-weight: bold">class</span> <span
+                            style="color: #BB0066; font-weight: bold">Cpf</span> {
+
+			<span style="color: #008800; font-weight: bold">public</span> <span
+                            style="color: #008800; font-weight: bold">static</span> <span
+                            style="color: #333399; font-weight: bold">string</span> <span
+                            style="color: #0066BB; font-weight: bold">GenerateNew</span>(<span
+                            style="color: #333399; font-weight: bold">bool</span> useDots) {
+				<span style="color: #333399; font-weight: bold">int</span> soma = <span
+                            style="color: #6600EE; font-weight: bold">0</span>, resto = <span
+                            style="color: #6600EE; font-weight: bold">0</span>;
+
+				<span style="color: #333399; font-weight: bold">int</span>[] multiplicador1 = <span
+                            style="color: #008800; font-weight: bold">new</span> <span
+                            style="color: #333399; font-weight: bold">int</span>[<span
+                            style="color: #6600EE; font-weight: bold">9</span>] { <span
+                            style="color: #6600EE; font-weight: bold">10</span>, <span
+                            style="color: #6600EE; font-weight: bold">9</span>, <span
+                            style="color: #6600EE; font-weight: bold">8</span>, <span
+                            style="color: #6600EE; font-weight: bold">7</span>, <span
+                            style="color: #6600EE; font-weight: bold">6</span>, <span
+                            style="color: #6600EE; font-weight: bold">5</span>, <span
+                            style="color: #6600EE; font-weight: bold">4</span>, <span
+                            style="color: #6600EE; font-weight: bold">3</span>, <span
+                            style="color: #6600EE; font-weight: bold">2</span> };
+				<span style="color: #333399; font-weight: bold">int</span>[] multiplicador2 = <span
+                            style="color: #008800; font-weight: bold">new</span> <span
+                            style="color: #333399; font-weight: bold">int</span>[<span
+                            style="color: #6600EE; font-weight: bold">10</span>] { <span
+                            style="color: #6600EE; font-weight: bold">11</span>, <span
+                            style="color: #6600EE; font-weight: bold">10</span>, <span
+                            style="color: #6600EE; font-weight: bold">9</span>, <span
+                            style="color: #6600EE; font-weight: bold">8</span>, <span
+                            style="color: #6600EE; font-weight: bold">7</span>, <span
+                            style="color: #6600EE; font-weight: bold">6</span>, <span
+                            style="color: #6600EE; font-weight: bold">5</span>, <span
+                            style="color: #6600EE; font-weight: bold">4</span>, <span
+                            style="color: #6600EE; font-weight: bold">3</span>, <span
+                            style="color: #6600EE; font-weight: bold">2</span> };
+
+				Random rnd = <span style="color: #008800; font-weight: bold">new</span> Random();
+				<span style="color: #333399; font-weight: bold">string</span> semente = rnd.Next(<span
+                            style="color: #6600EE; font-weight: bold">100000000</span>, <span
+                            style="color: #6600EE; font-weight: bold">999999999</span>).ToString();
+
+				<span style="color: #008800; font-weight: bold">for</span> (<span
+                            style="color: #333399; font-weight: bold">int</span> i = <span
+                            style="color: #6600EE; font-weight: bold">0</span>; i &lt; <span
+                            style="color: #6600EE; font-weight: bold">9</span>; i++)
+					soma += <span style="color: #333399; font-weight: bold">int</span>.Parse(semente[i].ToString()) * multiplicador1[i];
+
+				resto = soma % <span style="color: #6600EE; font-weight: bold">11</span>;
+
+				<span style="color: #008800; font-weight: bold">if</span> (resto &lt; <span
+                            style="color: #6600EE; font-weight: bold">2</span>)
+					resto = <span style="color: #6600EE; font-weight: bold">0</span>;
+				<span style="color: #008800; font-weight: bold">else</span>
+					resto = <span style="color: #6600EE; font-weight: bold">11</span> - resto;
+
+				semente = semente + resto;
+
+				soma = <span style="color: #6600EE; font-weight: bold">0</span>;
+
+				<span style="color: #008800; font-weight: bold">for</span> (<span
+                            style="color: #333399; font-weight: bold">int</span> i = <span
+                            style="color: #6600EE; font-weight: bold">0</span>; i &lt; <span
+                            style="color: #6600EE; font-weight: bold">10</span>; i++)
+					soma += <span style="color: #333399; font-weight: bold">int</span>.Parse(semente[i].ToString()) * multiplicador2[i];
+
+				resto = soma % <span style="color: #6600EE; font-weight: bold">11</span>;
+
+				<span style="color: #008800; font-weight: bold">if</span> (resto &lt; <span
+                            style="color: #6600EE; font-weight: bold">2</span>)
+					resto = <span style="color: #6600EE; font-weight: bold">0</span>;
+				<span style="color: #008800; font-weight: bold">else</span>
+					resto = <span style="color: #6600EE; font-weight: bold">11</span> - resto;
+
+				semente = semente + resto;
+
+				<span style="color: #008800; font-weight: bold">if</span> (useDots) {
+					semente = <span style="color: #333399; font-weight: bold">string</span>.Format(<span
+                            style="background-color: #fff0f0">&quot;{0}.{1}.{2}-{3}&quot;</span>, semente.Substring(<span
+                            style="color: #6600EE; font-weight: bold">0</span>, <span
+                            style="color: #6600EE; font-weight: bold">3</span>), semente.Substring(<span
+                            style="color: #6600EE; font-weight: bold">3</span>, <span
+                            style="color: #6600EE; font-weight: bold">3</span>), semente.Substring(<span
+                            style="color: #6600EE; font-weight: bold">6</span>, <span
+                            style="color: #6600EE; font-weight: bold">3</span>), semente.Substring(<span
+                            style="color: #6600EE; font-weight: bold">9</span>, <span
+                            style="color: #6600EE; font-weight: bold">2</span>));
+				}
+
+				<span style="color: #008800; font-weight: bold">return</span> semente;
+			}
+
+			<span style="color: #008800; font-weight: bold">public</span> <span
+                            style="color: #008800; font-weight: bold">static</span> <span
+                            style="color: #333399; font-weight: bold">bool</span> <span
+                            style="color: #0066BB; font-weight: bold">IsValid</span>(<span
+                            style="color: #333399; font-weight: bold">string</span> cpf) {
+
+				<span style="color: #333399; font-weight: bold">int</span>[] multiplicador1 = <span
+                            style="color: #008800; font-weight: bold">new</span> <span
+                            style="color: #333399; font-weight: bold">int</span>[<span
+                            style="color: #6600EE; font-weight: bold">9</span>] { <span
+                            style="color: #6600EE; font-weight: bold">10</span>, <span
+                            style="color: #6600EE; font-weight: bold">9</span>, <span
+                            style="color: #6600EE; font-weight: bold">8</span>, <span
+                            style="color: #6600EE; font-weight: bold">7</span>, <span
+                            style="color: #6600EE; font-weight: bold">6</span>, <span
+                            style="color: #6600EE; font-weight: bold">5</span>, <span
+                            style="color: #6600EE; font-weight: bold">4</span>, <span
+                            style="color: #6600EE; font-weight: bold">3</span>, <span
+                            style="color: #6600EE; font-weight: bold">2</span> };
+				<span style="color: #333399; font-weight: bold">int</span>[] multiplicador2 = <span
+                            style="color: #008800; font-weight: bold">new</span> <span
+                            style="color: #333399; font-weight: bold">int</span>[<span
+                            style="color: #6600EE; font-weight: bold">10</span>] { <span
+                            style="color: #6600EE; font-weight: bold">11</span>, <span
+                            style="color: #6600EE; font-weight: bold">10</span>, <span
+                            style="color: #6600EE; font-weight: bold">9</span>, <span
+                            style="color: #6600EE; font-weight: bold">8</span>, <span
+                            style="color: #6600EE; font-weight: bold">7</span>, <span
+                            style="color: #6600EE; font-weight: bold">6</span>, <span
+                            style="color: #6600EE; font-weight: bold">5</span>, <span
+                            style="color: #6600EE; font-weight: bold">4</span>, <span
+                            style="color: #6600EE; font-weight: bold">3</span>, <span
+                            style="color: #6600EE; font-weight: bold">2</span> };
+
+				<span style="color: #333399; font-weight: bold">string</span> tempCpf;
+				<span style="color: #333399; font-weight: bold">string</span> digito;
+
+				<span style="color: #333399; font-weight: bold">int</span> soma;
+				<span style="color: #333399; font-weight: bold">int</span> resto;
+
+				cpf = cpf.Trim();
+				cpf = cpf.Replace(<span style="background-color: #fff0f0">&quot;.&quot;</span>, <span
+                            style="background-color: #fff0f0">&quot;&quot;</span>).Replace(<span
+                            style="background-color: #fff0f0">&quot;-&quot;</span>, <span
+                            style="background-color: #fff0f0">&quot;&quot;</span>);
+
+				<span style="color: #008800; font-weight: bold">if</span> (cpf.Length != <span
+                            style="color: #6600EE; font-weight: bold">11</span>)
+					<span style="color: #008800; font-weight: bold">return</span> <span
+                            style="color: #008800; font-weight: bold">false</span>;
+
+				tempCpf = cpf.Substring(<span style="color: #6600EE; font-weight: bold">0</span>, <span
+                            style="color: #6600EE; font-weight: bold">9</span>);
+				soma = <span style="color: #6600EE; font-weight: bold">0</span>;
+
+				<span style="color: #008800; font-weight: bold">for</span> (<span
+                            style="color: #333399; font-weight: bold">int</span> i = <span
+                            style="color: #6600EE; font-weight: bold">0</span>; i &lt; <span
+                            style="color: #6600EE; font-weight: bold">9</span>; i++)
+					soma += <span style="color: #333399; font-weight: bold">int</span>.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+
+				resto = soma % <span style="color: #6600EE; font-weight: bold">11</span>;
+
+				<span style="color: #008800; font-weight: bold">if</span> (resto &lt; <span
+                            style="color: #6600EE; font-weight: bold">2</span>)
+					resto = <span style="color: #6600EE; font-weight: bold">0</span>;
+				<span style="color: #008800; font-weight: bold">else</span>
+					resto = <span style="color: #6600EE; font-weight: bold">11</span> - resto;
+
+				digito = resto.ToString();
+				tempCpf = tempCpf + digito;
+				soma = <span style="color: #6600EE; font-weight: bold">0</span>;
+
+				<span style="color: #008800; font-weight: bold">for</span> (<span
+                            style="color: #333399; font-weight: bold">int</span> i = <span
+                            style="color: #6600EE; font-weight: bold">0</span>; i &lt; <span
+                            style="color: #6600EE; font-weight: bold">10</span>; i++)
+					soma += <span style="color: #333399; font-weight: bold">int</span>.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+
+				resto = soma % <span style="color: #6600EE; font-weight: bold">11</span>;
+
+				<span style="color: #008800; font-weight: bold">if</span> (resto &lt; <span
+                            style="color: #6600EE; font-weight: bold">2</span>)
+					resto = <span style="color: #6600EE; font-weight: bold">0</span>;
+				<span style="color: #008800; font-weight: bold">else</span>
+					resto = <span style="color: #6600EE; font-weight: bold">11</span> - resto;
+
+				digito = digito + resto.ToString();
+
+				<span style="color: #008800; font-weight: bold">return</span> cpf.EndsWith(digito);
+			}
+		}
+	}
+
+			
+</pre>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- gerar-cpf-retangulo-medio-1 -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:250px"
+                     data-ad-client="ca-pub-8983921416236155"
+                     data-ad-slot="5765962824"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid ad-container text-center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- gerar-cpf-banner-grande-1 -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:320px;height:100px"
+         data-ad-client="ca-pub-8983921416236155"
+         data-ad-slot="4289229628"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+<footer class="container-fluid">
+    <div class="container wrapper">
+        <div class="row">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span>&lt;/&gt;</span>
+                </div>
+                <span class="footer-site-name"><strong>Gerador de CPF</strong></span>
+            </div>
+            <p class="footer-description">
+                Ferramenta para geração de <strong>CPF (Cadastro de Pessoa Física)</strong> fictício auxiliando
+                principalmente profissionais na área de desenvolvimento e teste de software. Veja também exemplos de
+                códigos aplicados nas linguagens Java, .Net C#, Javascript, PHP, Python e Ruby.
+            </p>
+        </div>
+        <p>
+            © 2014 - 2015 - Gerador de CPF - Ferramenta de Geração e Validação de CPF Fictício
+        </p>
+    </div>
+</footer>
+<script>
+    window.___gcfg = {
+        lang: 'pt-BR',
+        parsetags: 'onload'
+    };
+</script>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1390096521288477',
+            status: true,
+            xfbml: true,
+            version: 'v2.4'
+        });
+    };
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript" async defer
+        src="https://apis.google.com/js/platform.js?publisherid=105856849917847628854"></script>
+<script type="text/javascript" src="../static/js/all.js"></script>
+</body>
+</html>

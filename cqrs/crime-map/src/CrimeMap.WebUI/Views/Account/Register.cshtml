@@ -1,0 +1,56 @@
+﻿@model CrimeMap.WebUI.ViewModels.Account.RegisterModel
+
+<div class="container">
+	<div class="container-content register-container">
+		<h2>Register</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<section>
+					@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" })) {
+						@Html.Hidden("returnUrl", Model.ReturnUrl)
+						@Html.AntiForgeryToken()
+						<h4>Create a new account</h4>
+						<hr />
+						@Html.ValidationSummary()
+						<div class="form-group">
+							@Html.LabelFor(x => x.Name)
+							@Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+						</div>
+						<div class="form-group">
+							@Html.LabelFor(x => x.Email)
+							@Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+						</div>
+						<div class="form-group">
+							@Html.LabelFor(x => x.Password)
+							@Html.PasswordFor(x => x.Password, new { @class = "form-control" })
+						</div>
+						<div class="form-group">
+							@Html.LabelFor(x => x.PasswordConfirmation)
+							@Html.PasswordFor(x => x.PasswordConfirmation, new { @class = "form-control" })
+						</div>
+						<button type="submit" class="btn btn-default">Register</button>
+					}
+				</section>
+			</div>
+			<div class="col-md-4">
+				<section>
+					@using (Html.BeginForm("Facebook", "Account", FormMethod.Post, new { role = "form" })) {
+						@Html.Hidden("returnUrl", Model.ReturnUrl, new { id = "externalReturnUrl" })
+						@Html.AntiForgeryToken()
+						<h4>Use a social a network to register.</h4>
+						<hr />
+
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Choose your preferred social network to sign up.</h3>
+							</div>
+							<div class="panel-body">
+								<button type="submit" name="provider" value="Facebook" class="btn btn-block btn-facebook btn-large">Facebook</button>
+							</div>
+						</div>
+					}
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

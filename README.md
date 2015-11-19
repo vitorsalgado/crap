@@ -1,2 +1,1 @@
-# crap
-General stuff
+# General Stuff Repository

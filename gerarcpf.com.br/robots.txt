@@ -1,0 +1,8 @@
+Sitemap: http://gerarcpf.com.br/sitemap.xml
+
+User-agent: *
+Disallow: /README.md
+Disallow: /googlec54bf1c4e89e2ed8.html
+Disallow: /.gitattributes
+Disallow: /.gitignore
+Disallow: /static/js/main.js

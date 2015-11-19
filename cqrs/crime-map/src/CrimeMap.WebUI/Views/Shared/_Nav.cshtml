@@ -1,0 +1,40 @@
+﻿@model CrimeMap.WebUI.ViewModels.Shared.Nav
+
+@if (Model.IsAuthenticated) {
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="javascript:void(0);">@Model.Username <span class="caret"></span></a>
+		<ul class="dropdown-menu signedin-dropdown" role="menu">
+			<li><a title="Profile" href="/account/">Profile</a></li>
+			<li class="divider"></li>
+			<li><a title="Sign Out" href="javascript:void(0);" onclick="document.getElementById('headerSignOutForm').submit();">Sign Out</a></li>
+		</ul>
+	</li>
+} else {
+	<li><a href="/account/register">Register</a></li>
+	<li class="dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="javascript:void(0);">Sign In <span class="caret"></span></a>
+		<div class="dropdown-menu signin-dropdown">
+			@using (Html.BeginForm("FacebookSignIn", "Account", FormMethod.Post, new { role = "form", @class = "inline-form" })) {
+				@Html.AntiForgeryToken()
+				<input type="hidden" name="returnUrl" value="@HttpContext.Current.Request.Url.AbsolutePath" />
+				<h5 class="signin-dropdown-title">Enter using your preferred social network</h5>
+				<br />
+				<button type="submit" name="provider" value="Facebook" class="btn btn-block btn-facebook">Facebook</button>
+			}
+			<hr />
+			@using (Html.BeginForm("SignIn", "Account", FormMethod.Post, new { role = "form", @class = "inline-form" })) {
+				@Html.AntiForgeryToken()
+				<input type="hidden" name="returnUrl" value="@HttpContext.Current.Request.Url.AbsolutePath" />
+				<div class="form-group">
+					<label for="Email">Email:</label>
+					<input type="email" name="Email" id="Email" class="form-control" />
+				</div>
+				<div class="form-group">
+					<label for="Password">Password:</label>
+					<input type="password" name="Password" id="Password" class="form-control" />
+				</div>
+				<button type="submit" class="btn btn-primary">Sign In</button>
+			}
+		</div>
+	</li>
+}
