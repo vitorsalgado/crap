@@ -1,0 +1,27 @@
+{
+  "name": "pog-store-webstore",
+  "description": "PogStore Webstore",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Vitor Hugo Salgado <vsalgadopb@gmail.com>",
+  "license": "GNU GENERAL PUBLIC LICENSE Version 2",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "body-parser": "~1.12.4",
+    "cookie-parser": "^1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.12.4",
+    "jade": "~1.9.2",
+    "request": "^2.58.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitorsalgado/pog-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vitorsalgado/pog-store/issues"
+  },
+  "main": "./app.js"
+}

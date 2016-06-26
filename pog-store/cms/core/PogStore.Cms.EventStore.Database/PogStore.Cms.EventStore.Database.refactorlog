@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0964829b-f2e3-4066-909e-952e046b5709" ChangeDateTime="02/03/2015 03:56:25">
+    <Property Name="ElementName" Value="[dbo].[EventSources].[AggregateId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EventSources]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e1bce308-0e1c-49fa-8250-0fb23817f750" ChangeDateTime="02/03/2015 03:58:03">
+    <Property Name="ElementName" Value="[dbo].[Snapshot].[DateTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Snapshot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Timestamp" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c5f35167-c0d3-4b9c-aeff-db79c7df8ea0" ChangeDateTime="02/03/2015 03:58:11">
+    <Property Name="ElementName" Value="[dbo].[Snapshot].[SerializedData]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Snapshot]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Data" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c1e47684-94e5-4e5a-a5c6-f9852a4c43e8" ChangeDateTime="02/03/2015 03:59:32">
+    <Property Name="ElementName" Value="[dbo].[Event].[TimeStamp]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Event]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Timestamp" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="109c4b2e-ee2f-446a-9ecb-288e8587bc02" ChangeDateTime="02/03/2015 20:40:25">
+    <Property Name="ElementName" Value="[dbo].[EventLog].[AggregateId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EventLog]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EventSourceId" />
+  </Operation>
+</Operations>

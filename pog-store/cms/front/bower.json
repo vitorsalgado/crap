@@ -1,0 +1,27 @@
+{
+  "name": "pog-store-cms-admin-ui",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vitorsalgado/pog-store",
+  "authors": [
+    "Vitor Hugo Salgado <vsalgadopb@gmail.com>"
+  ],
+  "description": "",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.6",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "modernizr": "~3.0.0",
+    "angular-bootstrap": "~0.13.4",
+    "angular-sanitize": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-route": "~1.4.7"
+  }
+}

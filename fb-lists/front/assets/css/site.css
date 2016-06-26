@@ -1,0 +1,45 @@
+body {
+    color: #2d313f;
+    background-color: #e7eaf0;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.added-pages-container,
+.small-page-shelf-container {
+    height: 250px;
+    overflow: auto;
+}
+
+.small-page-shelf {
+    font-size: 12px;
+    height: 225px;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    color: #fff;
+    cursor: wait;
+}
+
+.overlay p {
+    font-size: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

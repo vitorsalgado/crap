@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1F847589-3D5B-4660-B014-CF311FDA6603}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "event sourcing", "event sourcing", "{DDC8DAF5-9AB0-40EB-80B2-90837895ECFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.EventStore", "PogStore.Cms.EventStore\PogStore.Cms.EventStore.csproj", "{583F6A00-F154-4903-957C-BE27161714ED}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PogStore.Cms.EventStore.Database", "PogStore.Cms.EventStore.Database\PogStore.Cms.EventStore.Database.sqlproj", "{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4283CE30-16E0-4438-90BF-70700CFF3CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Tests.Common", "PogStore.Cms.Tests.Common\PogStore.Cms.Tests.Common.csproj", "{143C6A65-EC3F-49A0-9134-523E89651CCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Core", "PogStore.Cms.Core\PogStore.Cms.Core.csproj", "{5DB8326D-0E06-4F00-8CDF-785CD11B2247}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{4140C71B-EBA6-4485-92A7-9C69934CFFB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Domain", "PogStore.Cms.Domain\PogStore.Cms.Domain.csproj", "{05E7BE51-73DC-4123-B684-8C97060FCD8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{68255CD2-A4F9-4BAD-B96B-EB5665509522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Infrastructure", "PogStore.Cms.Infrastructure\PogStore.Cms.Infrastructure.csproj", "{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{583F6A00-F154-4903-957C-BE27161714ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{583F6A00-F154-4903-957C-BE27161714ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{583F6A00-F154-4903-957C-BE27161714ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{583F6A00-F154-4903-957C-BE27161714ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{143C6A65-EC3F-49A0-9134-523E89651CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143C6A65-EC3F-49A0-9134-523E89651CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143C6A65-EC3F-49A0-9134-523E89651CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143C6A65-EC3F-49A0-9134-523E89651CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{583F6A00-F154-4903-957C-BE27161714ED} = {DDC8DAF5-9AB0-40EB-80B2-90837895ECFB}
+		{BE4DB08E-3EE5-42F8-882C-CDCD0F5E8C9D} = {DDC8DAF5-9AB0-40EB-80B2-90837895ECFB}
+		{143C6A65-EC3F-49A0-9134-523E89651CCD} = {4283CE30-16E0-4438-90BF-70700CFF3CF3}
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247} = {4140C71B-EBA6-4485-92A7-9C69934CFFB4}
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E} = {4140C71B-EBA6-4485-92A7-9C69934CFFB4}
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2} = {68255CD2-A4F9-4BAD-B96B-EB5665509522}
+	EndGlobalSection
+EndGlobal

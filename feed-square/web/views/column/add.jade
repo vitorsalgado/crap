@@ -1,0 +1,32 @@
+.modal.fade.dialog-add-column(tabindex='-1', role='dialog')
+    .modal-dialog.modal-lg
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') x
+                h4#dialog-add-column.modal-title Create new feed column
+            .modal-body
+                nav.navbar.navbar-default
+                    .container-fluid
+                        .collapse.navbar-collapse
+                            form.navbar-form.navbar-left(role="search")
+                                .form-group
+                                    label.sr-only(for="txt-column-name") Column Name
+                                    input.form-control(type="text", id="txt-column-name", placeholder="column name")
+                                .form-group
+                                    input.form-control(type="text", placeholder="search")
+                                button.btn.btn-default(type="button") Search
+                .row
+                    .col-md-8
+                        .container-fluid
+                            .list-group#pages-paged-container
+                        nav
+                            ul.pager
+                                li
+                                    a(href="javascript:void(0);") Previous
+                                    a(href="javascript:void(0);") Next
+                    .col-md-4
+                        .well
+            .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+                button.btn.btn-primary(type='button') Apply

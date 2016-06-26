@@ -1,0 +1,39 @@
+doctype html
+html(ng-app="feedSquare")
+    head
+        title="Feed Square"
+        link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/libs/bootstrap/dist/css/bootstrap-theme.min.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+        link(rel='stylesheet', href='/libs/magnific-popup/dist/magnific-popup.css')
+        link(rel='stylesheet', href='/css/reset.css')
+        link(rel='stylesheet', href='/css/main.css')
+    body
+        include facebook
+
+        div(id="loading-overlay" class="loading-overlay")
+
+        block content
+
+        script(src="/libs/jquery/dist/jquery.min.js")
+        script(src="/libs/q-bower/q.min.js")
+        script(src="/libs/angular/angular.min.js")
+        script(src="/libs/angular-route/angular-route.min.js")
+        script(src="/libs/angular-resource/angular-resource.min.js")
+        script(src="/libs/bootstrap/dist/js/bootstrap.min.js")
+        script(src="/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+        script(src="/js/app.js")
+        script(src="/js/namespaces.js")
+        script(src="/js/infrastructure/Globals.js")
+        script(src="/js/infrastructure/Settings.js")
+        script(src="/js/infrastructure/Ajax.js")
+        script(src="/js/infrastructure/EventManager.js")
+        script(src="/js/infrastructure/LocalDataStorage.js")
+        script(src="/js/infrastructure/FbAuthService.js")
+        script(src="/js/infrastructure/ViewHelper.js")
+        script(src="/js/controllers/AccountController.js")
+        script(src="/js/controllers/FbPagesController.js")
+        script(src="/js/init.js")
+        script(src="/js/views/main.view.js")
+
+        block additionalScripts

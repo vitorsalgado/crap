@@ -1,0 +1,55 @@
+<div class="modal-header">
+    <h3 class="modal-title">Add pages</h3>
+</div>
+<div class="modal-body">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="input-group input-group-lg">
+                <input type="text" placeholder="Search" class="form-control"/><span class="input-group-btn">
+          <button type="submit" ng-click="search()" class="btn btn-default">Search</button></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row small-page-shelf-container">
+                <div ng-repeat="page in pages track by $index" ng-popover="ng-popover" class="col-sm-6 col-md-4 pull-left small-page-shelf">
+                    <input id="page-{{page.id}}" type="hidden" value="{{page.id}}"/>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{{page.name}}</div>
+                        <div class="panel-body"><a href="{{page.link}}" targe="_blank" class="thumbnail"><img ng-src="{{page.picture.data.url}}" alt="{{page.name}}"/></a>
+                            <p><span class="badge">Likes {{page.likes}}</span></p>
+                        </div>
+                        <div class="panel-footer">
+                            <ul role="tablist" class="nav nav-pills">
+                                <li role="presentation" class="active"><a href="javascript:void(0)" ng-click="addPage({id:page.id, name:page.name, likes:page.likes})" class="glyphicon glyphicon-plus"></a></li>
+                                <li role="presentation"><a href="javascript:void(0)" uib-popover="{{page.about}}" popover-title="{{page.name}}" popover-placement="right" popover-append-to-body="true" class="glyphicon glyphicon-info-sign"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="pager">
+                    <li class="previous"><a href="javascript:void(0)" ng-class="currentPage == 1 ? 'disabled' : ''" ng-click="getPage(currentPage == 1 ? 1 : currentPage - 1)">Previous</a></li>
+                    <li class="next"><a href="javascript:void(0)" ng-class="currentPage == pagedData.pageCount ? 'disabled' : ''" ng-click="getPage(currentPage == pagedData.pageCount ? pagedData.pageCount : currentPage + 1)">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default added-pages-container">
+                <div class="panel-heading">Added pages</div>
+                <div class="panel-body">
+                    <p>Double click to remove a added page from list</p>
+                </div>
+                <div class="list-group">
+                    <button type="button" ng-repeat="page in addedPages" id="{{page.id}}" ng-dblclick="removePage(page.id)" class="list-group-item">{{page.name}}<span class="badge">{{page.likes}}</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" ng-click="add()" class="btn btn-default">Create</button>
+    <button type="button" ng-click="cancel()" class="btn btn-danger">Cancel</button>
+</div>

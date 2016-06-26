@@ -1,0 +1,26 @@
+{
+  "name": "Feed Square git://github.com/vitorsalgado/feed-square.git",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vitorsalgado/feed-square",
+  "authors": [
+    "Vitor Hugo Salgado <vsalgadopb@gmail.com>"
+  ],
+  "description": "",
+  "license": "GNU GENERAL PUBLIC LICENSE Version 2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-mocks": "~1.4.4",
+    "angular-resource": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3"
+  }
+}

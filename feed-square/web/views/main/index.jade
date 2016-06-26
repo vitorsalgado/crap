@@ -1,0 +1,34 @@
+extends ../layout
+
+block content
+    div(class="app-container")
+        header(class="header navbar navbar-default no-border-radius")
+            .container
+                .navbar-header.navbar-left
+                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/')
+                        strong Feed Square
+                nav.collapse.navbar-collapse.navbar-right
+                    button.btn.btn-default.navbar-btn(id='btn-add-column', type='button', data-toggle="modal", data-target="#dialog-column-type") Add Column
+                    ul.nav.navbar-nav
+                        li#top-menu-login
+                            a(href='javascript:void(0);', data-toggle="modal", data-target="#dialog-sign-in") sign in
+                        li.dropdown#top-menu-profile
+                            a.dropdown-toggle#profile-name(href='javascript:void(0);', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                                span.caret
+                            ul.dropdown-menu
+                                li
+                                    a#btn-profile(href='javascript:void(0);') Profile
+                                li.divider(role='separator')
+                                li
+                                    a(href='#') Sign Out
+
+        include ../account/signin
+        include ../account/profile
+        include ../column/add
+        include ../column/type
+
+block additionalScripts

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="navbar-header navbar-left">
+        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a href="/" title="Home" class="navbar-brand"><strong>Crappy Lists</strong></a>
+    </div>
+    <div class="navbar-right">
+        <nav class="collapse navbar-collapse pull-right">
+            <ul class="nav navbar-nav">
+                <li ng-switch="ng-switch" on="isAuthenticated">
+                    <a id="btn-signin" ng-switch-when="false" href="#" ng-click="login()" title="Sign In" data-toggle="modal" data-target="#modal-sign-in">Sign In</a>
+                    <a ng-switch-when="true" href="/me" title="{{user.firstName}}" ng-bind="user.name"></a>
+                </li>
+                <li><a href="/about" title="About">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

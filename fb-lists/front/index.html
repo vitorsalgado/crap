@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="fb.lists">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Vitor Hugo Salgado">
+    <meta name="description" content="">
+    <title>CrappyLists</title>
+
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/libs/angular/angular-csp.css"/>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/site.css"/>
+</head>
+<body ng-controller="MainController">
+<header ng-include="'app/common/views/header.html'" class="header navbar navbar-default" role="navigation">
+</header>
+
+<div id="application-container" ng-view>
+
+</div>
+
+<!-- libs-->
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/libs/angular/angular.min.js"></script>
+<script src="assets/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="assets/libs/angular-route/angular-route.min.js"></script>
+
+<!-- configuration-->
+<script src="app/app.globals.js"></script>
+<script src="app/app.js"></script>
+<script src="app/app.router.js"></script>
+
+<!-- main module -->
+<script src="app/main/controllers/mainController.js"></script>
+
+<!-- account module-->
+<script src="app/account/controllers/loginController.js"></script>
+<script src="app/account/services/authenticationService.js"></script>
+
+<!-- list module-->
+<script src="app/list/controllers/createListController.js"></script>
+<script src="app/list/controllers/listController.js"></script>
+<script src="app/list/services/listService.js"></script>
+
+<!-- fb module-->
+<script src="app/facebook/services/pageService.js"></script>
+
+<!-- infrastructure module-->
+<script src="app/infrastructure/dataStorage.js"></script>
+</body>
+</html>

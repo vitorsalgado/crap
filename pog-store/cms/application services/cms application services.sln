@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1F847589-3D5B-4660-B014-CF311FDA6603}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{405A2DDA-006A-4F85-B9AC-3A772C483A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.ApplicationServices", "PogStore.Cms.ApplicationServices\PogStore.Cms.ApplicationServices.csproj", "{C8615E64-D210-4D7F-AFE1-ED72D1692AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.AdminApi", "PogStore.Cms.AdminApi\PogStore.Cms.AdminApi.csproj", "{35D3783D-44AD-43AA-8D9E-2AAD2FA15218}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "admin", "admin", "{5A2B9DC6-0F02-465E-A166-1D1FA4142BC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".refs", ".refs", "{8A3A13CE-8ACC-412B-8518-23725A139FD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{3EE0368F-0308-428C-8810-8EAC371BB8DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{74CC7EB5-C1CB-48D2-9DA1-25B880A9996E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Core", "..\core\PogStore.Cms.Core\PogStore.Cms.Core.csproj", "{5DB8326D-0E06-4F00-8CDF-785CD11B2247}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Domain", "..\core\PogStore.Cms.Domain\PogStore.Cms.Domain.csproj", "{05E7BE51-73DC-4123-B684-8C97060FCD8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Infrastructure", "..\core\PogStore.Cms.Infrastructure\PogStore.Cms.Infrastructure.csproj", "{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "front", "front", "{A226DFE3-DD1B-45CA-986E-3323E71DDA1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.EventStore", "..\core\PogStore.Cms.EventStore\PogStore.Cms.EventStore.csproj", "{583F6A00-F154-4903-957C-BE27161714ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PogStore.Cms.Commanding", "PogStore.Cms.Commanding\PogStore.Cms.Commanding.csproj", "{12FCBDA5-4B87-49B9-B553-AAA4CC1EF880}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8615E64-D210-4D7F-AFE1-ED72D1692AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8615E64-D210-4D7F-AFE1-ED72D1692AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8615E64-D210-4D7F-AFE1-ED72D1692AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8615E64-D210-4D7F-AFE1-ED72D1692AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D3783D-44AD-43AA-8D9E-2AAD2FA15218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D3783D-44AD-43AA-8D9E-2AAD2FA15218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D3783D-44AD-43AA-8D9E-2AAD2FA15218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D3783D-44AD-43AA-8D9E-2AAD2FA15218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{583F6A00-F154-4903-957C-BE27161714ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{583F6A00-F154-4903-957C-BE27161714ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{583F6A00-F154-4903-957C-BE27161714ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{583F6A00-F154-4903-957C-BE27161714ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12FCBDA5-4B87-49B9-B553-AAA4CC1EF880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FCBDA5-4B87-49B9-B553-AAA4CC1EF880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FCBDA5-4B87-49B9-B553-AAA4CC1EF880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FCBDA5-4B87-49B9-B553-AAA4CC1EF880}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8615E64-D210-4D7F-AFE1-ED72D1692AFE} = {5A2B9DC6-0F02-465E-A166-1D1FA4142BC6}
+		{35D3783D-44AD-43AA-8D9E-2AAD2FA15218} = {5A2B9DC6-0F02-465E-A166-1D1FA4142BC6}
+		{3EE0368F-0308-428C-8810-8EAC371BB8DD} = {8A3A13CE-8ACC-412B-8518-23725A139FD6}
+		{74CC7EB5-C1CB-48D2-9DA1-25B880A9996E} = {8A3A13CE-8ACC-412B-8518-23725A139FD6}
+		{5DB8326D-0E06-4F00-8CDF-785CD11B2247} = {3EE0368F-0308-428C-8810-8EAC371BB8DD}
+		{05E7BE51-73DC-4123-B684-8C97060FCD8E} = {3EE0368F-0308-428C-8810-8EAC371BB8DD}
+		{FDC52C60-3FCC-43E5-A1E2-4CFC57F10BC2} = {74CC7EB5-C1CB-48D2-9DA1-25B880A9996E}
+		{583F6A00-F154-4903-957C-BE27161714ED} = {74CC7EB5-C1CB-48D2-9DA1-25B880A9996E}
+		{12FCBDA5-4B87-49B9-B553-AAA4CC1EF880} = {5A2B9DC6-0F02-465E-A166-1D1FA4142BC6}
+	EndGlobalSection
+EndGlobal

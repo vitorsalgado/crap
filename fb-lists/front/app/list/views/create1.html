@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h3 class="modal-title">Create new list</h3>
+</div>
+<div class="modal-body">
+    <form name="formListStage1" novalidate="novalidate">
+        <div class="form-group form-group-lg">
+            <label for="listNameBox">Name</label>
+            <input id="listNameBox" type="input" ng-model="listName" placeholder="type the list name" required="required" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="listNameDescriptionBox">Description</label>
+            <textarea id="listNameDescriptionBox" type="input" ng-model="listDescription" placeholder="describe your list" required="required" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="listTagBox">Tags</label>
+            <input id="listTagBox" type="input" ng-model="listTags" class="form-control"/>
+        </div>
+        <button type="submit" ng-click="next()" ng-disabled="formListStage1.$invalid" class="btn btn-primary">Next</button>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" ng-click="cancel()" class="btn btn-danger">Cancel</button>
+</div>

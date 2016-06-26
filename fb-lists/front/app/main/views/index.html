@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="page-header text-center">
+        <h1>Crappy Lists</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="input-group input-group-lg">
+            <input id="searchBox" type="text" ng-model="searchBox" placeholder="search lists" ng-keydown="$event.which === 13 &amp;&amp; function()" class="form-control"/><span class="input-group-btn">
+        <button id="searchBox" type="button" ng-click="getCep()" class="btn btn-default">Search</button></span>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2 class="text-center">Create a list or see your friends ones</h2>
+    <div class="row">
+        <ul style="width:270px" class="nav nav-pills center-block">
+            <li role="presentation" class="active"><a href="javascript:void(0);" ng-click="createList()">Create</a></li>
+            <li role="presentation"><a href="/me">My Lists</a></li>
+            <li role="presentation"><a href="javascript:void(0);">Friends Lists</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <h2 class="text-center">Newly Ones</h2>
+    <div class="row"></div>
+</div>

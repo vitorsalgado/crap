@@ -1,0 +1,22 @@
+#dialog-column-type.modal.fade(tabindex='-1', role='dialog')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') x
+                h4.modal-title Choose column type
+            .modal-body
+                .container-fluid
+                    ul.column-type-menu
+                        li
+                            a(href="javascript:void(0);") Timeline
+                        li
+                            a(href="javascript:void(0);") Friend
+                        li
+                            a(href="javascript:void(0);") Page
+                        li
+                            a(href="javascript:void(0);") Page Collection
+                        li
+                            a(href="javascript:void(0);") Hashtag
+            .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close

@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h3 class="modal-title">Add new user</h3>
+</div>
+<form>
+    <div class="modal-body">
+            <div class="form-group">
+                <label for="txtName">Name:</label>
+                <input type="text" class="form-control" id="txtName" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="txtEmail">Email:</label>
+                <input type="email" class="form-control" id="txtEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="txtPassword">Password:</label>
+                <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="txtPasswordRepeat">Retype your Password:</label>
+                <input type="password" class="form-control" id="txtPasswordRepeat" placeholder="Retype your password">
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</form>

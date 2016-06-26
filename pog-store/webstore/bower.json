@@ -1,0 +1,19 @@
+{
+  "name": "pog-store",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vitorsalgado/pog-store/",
+  "authors": [
+    "Vitor Hugo Salgado <vsalgadopb@gmail.com>"
+  ],
+  "description": "",
+  "license": "GNU GENERAL PUBLIC LICENSE Version 2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

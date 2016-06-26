@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="br.com.pogstore.cms">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PogStore CMS</title>
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="assets/libs/angular/angular-csp.css"/>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/site.css"/>
+</head>
+<body>
+<header ng-include="'app/shared/header.html'" class="navbar navbar-static-top" role="navigation">
+</header>
+
+<div class="page-container">
+    <div class="container-fluid">
+        <div class="page-header">
+            <div class="page-title">
+                <h1>User Administration</h1>
+            </div>
+        </div>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">Data</li>
+        </ol>
+        <div ng-view>
+        </div>
+    </div>
+</div>
+
+<!--<div ng-include="'app/shared/footer.html'"></div>-->
+
+<!--libs-->
+<script src="assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/libs/angular/angular.min.js"></script>
+<script src="assets/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="assets/libs/angular-route/angular-route.min.js"></script>
+
+<!--configuration and initialization-->
+<script src="app/app.js"></script>
+<script src="app/routes.js"></script>
+
+<!--user module-->
+<script src="app/users/userController.js"></script>
+<script src="app/users/_createController.js"></script>
+</body>
+</html>
