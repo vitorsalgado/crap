@@ -1,0 +1,37 @@
+CREATE DATABASE IF NOT EXISTS ns;
+
+USE ns;
+
+DROP TABLE IF EXISTS address;
+DROP TABLE IF EXISTS zipcode;
+
+CREATE TABLE address (
+  id BIGINT(20) NOT NULL AUTO_INCREMENT,
+  zipcode VARCHAR(255) NOT NULL,
+  type VARCHAR(255) NOT NULL,
+  street VARCHAR(255) NOT NULL,
+  number VARCHAR(255) NOT NULL,
+  neighborhood VARCHAR(255) NOT NULL,
+  city VARCHAR(255) NOT NULL,
+  state VARCHAR(255) NOT NULL,
+  detail VARCHAR(255) NULL,
+  reference VARCHAR(255) NULL,
+
+  PRIMARY KEY ( id )
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+CREATE TABLE zipcode (
+    id BIGINT(20) NOT NULL AUTO_INCREMENT,
+    code VARCHAR(255) NOT NULL,
+    street VARCHAR(255) NULL,
+    neighborhood VARCHAR(255) NULL,
+    city VARCHAR(255) NOT NULL,
+    state VARCHAR(255) NOT NULL,
+
+    PRIMARY KEY( id ),
+    INDEX idx_zipcode ( code )
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
