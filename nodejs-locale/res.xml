@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <data name="password">
+        <pt>Senha:</pt>
+        <en>Password:</en>
+    </data>
+    <data name="email">
+        <pt>Email</pt>
+        <en>Email</en>
+    </data>
+    <data name="enter">
+        <pt>Entrar</pt>
+        <en>Enter</en>
+    </data>
+    <data name="Register">
+        <pt>Registrar</pt>
+        <en>Register</en>
+    </data>
+    <data name="Login_Box_Label">
+        <pt>Entre com sua rede social favorita</pt>
+    </data>
+
+    <!-- Common -->
+
+    <data name="required">
+        <pt>Campo obrigatório</pt>
+        <en>Required field</en>
+    </data>
+    <data name="close">
+        <pt>Fechar</pt>
+    </data>
+    <data name="invalidModel">
+        <pt>Campos inválidos</pt>
+    </data>
+
+    <!-- Breadcrum -->
+
+    <data name="brdRegister">
+        <pt>Novo cadastro</pt>
+    </data>
+    <data name="brdConfirmation">
+        <pt>Novo cadastro</pt>
+    </data>
+
+    <!-- User Registration -->
+
+    <data name="registrationError">
+        <pt>Desculpe, ocorreu uma falha ao realizar seu cadastro :( Por favor, tente novamente</pt>
+    </data>
+    <data name="registrationComplete">
+        <pt>Seu cadastro foi concluído. Enviamos um e-mail de confirmação.</pt>
+    </data>
+    <data name="registrationFinishedTitle">
+        <pt>Cadastro concluído</pt>
+    </data>
+    <data name="backToHome">
+        <pt>Voltar para a página inicial</pt>
+    </data>
+    <data name="emailAlreadyRegistered">
+        <pt>Email já cadastrado</pt>
+    </data>
+    <data name="invalidEmail">
+        <pt>Digite um e-mail válido</pt>
+        <en>Type a valid e-mail</en>
+    </data>
+    <data name="passwordMinLength">
+        <pt>Senhas devem conter no mínimo 6 caracteres</pt>
+        <en>Password must contain at least 6 characters</en>
+    </data>
+    <data name="passwordConfirmation">
+        <pt>Senhas devem ser iguais</pt>
+        <en>Passwords must match</en>
+    </data>
+    <data name="invalidDate">
+        <pt>Data inválida</pt>
+        <en>Invalid date</en>
+    </data>
+    <data name="connectedWith">
+        <pt>Conectado com</pt>
+    </data>
+    <data name="preferredLanguage">
+        <pt>Idioma</pt>
+    </data>
+
+</resources>
