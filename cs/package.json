@@ -1,0 +1,44 @@
+{
+  "name": "cs-challenge",
+  "version": "1.0.0",
+  "description": "CS Desafio Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "gulp": "gulp default",
+    "test": "npm run gulp && jasmine"
+  },
+  "engines": {
+    "node": "6.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorsalgado/cs.git"
+  },
+  "author": "Vitor Hugo Salgado <vsalgadopb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitorsalgado/cs/issues"
+  },
+  "homepage": "https://github.com/vitorsalgado/cs#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "crypto": "0.0.3",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "js-yaml": "^3.6.1",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.0",
+    "swagger-tools": "^0.10.1",
+    "uuid": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-plugin-jasmine": "^1.8.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "jasmine": "^2.4.1",
+    "jasmine-node": "^1.14.5",
+    "nodemon": "^1.10.2"
+  }
+}

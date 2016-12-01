@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- node
+deploy:
+  provider: heroku
+  api_key:
+    secure: cJREk+wFyCJN4/xFhY4La6gyjXCcXBEUUFwu6xoqu/OwcN6NcWzzzEV2GffIzRnsPMEa9Qvv4tWIiV9N+epzh72MGToRBT/qGUNy6FIa+UD1eIn2dDwshvXnqMY6aLaAT90JiL0TFHv+j4zcW3GyKQtErE97k7laagzOJFbiKCSCIN69uuSRqpDEeTqvLuWW4THoAyMRPUROcV4PjRo8dLW/U3KmD31MhkvQbfs/MgLqIF4soegPaGzjzyZdV2CXrXexYMap3w0OvxXAim8LP8Qywx373UPvfj8+icgd7/QRNM7jonQvzwQ1qT3QDc7bSemgZCqb/RiHIgshbq1feRHYr6ar7VRQFJScvCwMRncPBUItA7g4bfk1lnQZpRRyEDof55UHCsQclmqgPO8OlTomvFK54oUyaoZf7A+4PVq2K6GMC6ZveyFYk/hBB+pv7Pwxq46oTYxwFfSopWhxmEI2xKomXlthqRAt9+Q/r2k+uGJxSjjz8MovBmUIgVPJ1Lh6j8XKWgg8QPk9jAzPtuPmarNL2tCGJOWRCz75iv3oLxntg/jta9TizgAGrZf3M79aykJLnhSLLBdyTnKxjC/ct77mOuj9CtuC83fYsO1OaIpZuH7JjiPUKK91fKdQwunX3qfdY6qeeswWrZ6FpDE5Kbf4uUhKWJzgFSM3/IY=
+  app: cs-desafio
+  on:
+    repo: vitorsalgado/cs

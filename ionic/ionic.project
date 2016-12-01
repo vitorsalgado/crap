@@ -1,8 +1,0 @@
-{
-  "name": "app",
-  "app_id": "c2a1172b",
-  "watchPatterns": [
-    "www/js/*",
-    "!www/css/**/*"
-  ]
-}
